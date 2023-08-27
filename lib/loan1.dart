@@ -99,23 +99,17 @@ class _loan1State extends State<loan1> {
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
                             Expanded(
-                              child: Container(
-
-                                child:Column(
-                                  children: [
-
-                                  
-                                 Text(
-                                  "23%", style: TextStyle(fontSize: 20),
-                                  // 'description',
-                                  // fit: BoxFit.fill,
-                                ),
-                              
-                              ],
-                                ),
-
+                                child: Container(
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "23%", style: TextStyle(fontSize: 20),
+                                    // 'description',
+                                    // fit: BoxFit.fill,
+                                  ),
+                                ],
                               ),
-                            ),
+                            )),
                             Text(
                               text[index],
                               style: TextStyle(
@@ -134,8 +128,8 @@ class _loan1State extends State<loan1> {
                             //     ),
                             //   ],
                             // )
-                          
-                        
+                          ],
+                        ),
                       ],
                     ),
                   ),
