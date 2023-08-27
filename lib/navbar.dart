@@ -11,9 +11,11 @@ class _navbarState extends State<navbar> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       bottomNavigationBar: Container(
-        margin: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
+        margin: EdgeInsets.symmetric(horizontal: 60, vertical: 5),
         decoration: BoxDecoration(
+          // color: Colors.blue,
           borderRadius: BorderRadius.all(
             Radius.circular(30),
           ),
@@ -22,7 +24,7 @@ class _navbarState extends State<navbar> {
           ],
         ),
         child: ClipRRect(
-          borderRadius: BorderRadius.all(Radius.circular(100)
+          borderRadius: BorderRadius.all(Radius.circular(30)
               // topLeft: Radius.circular(30.0),
               // topRight: Radius.circular(30.0),
               ),

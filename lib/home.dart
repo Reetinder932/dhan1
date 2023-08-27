@@ -1,5 +1,6 @@
 import 'package:dhan1/loan1.dart';
 import 'package:dhan1/loan2.dart';
+import 'package:dhan1/navbar.dart';
 import 'package:flutter/material.dart';
 
 class home extends StatefulWidget {
@@ -11,10 +12,10 @@ class home extends StatefulWidget {
 
 class _homeState extends State<home> {
   List<String> images = [
-    "https://th.bing.com/th/id/OIP.h-a9qrbZCeOip0S-p8aSagHaEK?w=311&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-    "https://th.bing.com/th/id/OIP.3IpTDJHFyZGcJHrJ2As-AwHaEK?w=311&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-    "https://th.bing.com/th/id/OIP.h-a9qrbZCeOip0S-p8aSagHaEK?w=311&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-    "https://th.bing.com/th/id/OIP.h-a9qrbZCeOip0S-p8aSagHaEK?w=311&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+    "assets/images/a.png",
+    "assets/images/a.png",
+    "assets/images/a.png",
+    "assets/images/a.png",
   ];
   List page = [
     loan1(),
@@ -26,92 +27,117 @@ class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[200],
+      extendBody: true,
       appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text('Loans Available'),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(
-              Icons.circle,
-              color: Colors.white,
-              size: 30,
-            ),
-            onPressed: () {
-              // do something
-            },
-          )
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: ListView.builder(
-            physics: NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            itemCount: 4,
-            itemBuilder: (context, index) {
-              return InkWell(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => page[index]));
-                },
-                child: Card(
-                  margin: EdgeInsets.fromLTRB(20, 10, 20, 20),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  elevation: 0.0,
-                  child: Stack(
-                    children: [
-                      ClipRRect(
-                          borderRadius: BorderRadius.circular(10),
-                          child: Image.network(
-                            images[index],
-                            fit: BoxFit.cover,
-                            width: double.infinity,
-                            height: 200,
-                          )),
-                      // Positioned(
-                      //     left: 0,
-                      //     right: 0,
-                      //     bottom: 0,
-                      //     child: Container(
-                      //         padding: EdgeInsets.symmetric(
-                      //             vertical: 5, horizontal: 10),
-                      //         decoration: BoxDecoration(color: Colors.black26),
-                      //         child: Text(
-                      //           //  reciepelist[index].applabel,
-                      //           style: TextStyle(
-                      //               color: Colors.white,
-                      //               fontSize: 20,
-                      //               fontWeight: FontWeight.bold),
-                      //         ))),
-                      // Positioned(
-                      //   right: 0,
-                      //   height: 40,
-                      //   width: 80,
-                      //   child: Container(
-                      //       decoration: BoxDecoration(
-                      //           color: Colors.white,
-                      //           borderRadius: BorderRadius.only(
-                      //               topRight: Radius.circular(10),
-                      //               bottomLeft: Radius.circular(10))),
-                      //       child: Center(
-                      //         child: Row(
-                      //           mainAxisAlignment: MainAxisAlignment.center,
-                      //           children: [
-                      //             Icon(
-                      //               Icons.local_fire_department,
-                      //               size: 15,
-                      //             ),
-
-                      //           ],
-                      //         ),
-                      //       )),
-                      // )
-                    ],
+          scrolledUnderElevation: 0.0,
+          // backgroundColor: Colors.transparent,
+          title: Container(
+            margin: EdgeInsets.fromLTRB(0, 25, 0, 20),
+            // mainAxisAlignment: MainAxisAlignment.center,
+            child: Row(
+              children: [
+                Icon(
+                  Icons.list,
+                  size: 50,
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(47, 5, 0, 0),
+                  child: Image.asset(
+                    'assets/images/abc.png',
+                    width: 200,
+                    height: 150,
                   ),
                 ),
-              );
-            }),
+              ],
+            ),
+          )),
+      body: Container(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              margin: EdgeInsets.fromLTRB(40, 5, 5, 5),
+              child: Text(
+                "Available Schemes",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+            ),
+            Expanded(
+              child: SingleChildScrollView(
+                  child: ListView.builder(
+                      physics: NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      itemCount: 4,
+                      itemBuilder: (context, index) {
+                        return GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => page[index],
+                                ));
+                          },
+                          child: Card(
+                            margin: EdgeInsets.fromLTRB(40, 10, 40, 20),
+                            color: Colors.grey[300],
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            elevation: 3,
+                            child: ClipRect(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(10),
+                                    child: Image.asset(images[
+                                            index] // Replace with your image URL
+                                        // height: 150,
+                                        // width: double.infinity,
+                                        // fit: BoxFit.cover,
+                                        ),
+                                  ),
+                                  // SizedBox(height: 10),
+                                  Container(
+                                    padding: EdgeInsets.all(7),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        // Container(
+                                        //   margin:
+                                        //       EdgeInsets.fromLTRB(0, 0, 140, 0),
+                                        //   child: ElevatedButton(
+                                        //       style: ElevatedButton.styleFrom(
+                                        //           foregroundColor: Colors.white,
+                                        //           backgroundColor:
+                                        //               Colors.green),
+                                        //       onPressed: () {
+                                        //         Navigator.push(
+                                        //             context,
+                                        //             MaterialPageRoute(
+                                        //                 builder: (context) =>
+                                        //                     page[index]));
+                                        //       },
+                                        //       child: Text("Apply Now")),
+                                        // ),
+                                        Icon(
+                                          Icons.verified,
+                                          size: 35,
+                                          color: Colors.blue,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        );
+                      })),
+            ),
+          ],
+        ),
       ),
     );
   }
