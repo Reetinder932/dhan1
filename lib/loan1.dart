@@ -10,6 +10,12 @@ class loan1 extends StatefulWidget {
 
 class _loan1State extends State<loan1> {
   List<String> text = ["Interest", "Eligibility", "Repayment Time", "Minimum"];
+  List<String> integer = [
+    "10%",
+    "Required\n - Farad \n  ",
+    "3 years",
+    "1 lakh"
+  ];
   @override
   @override
   Widget build(BuildContext context) {
@@ -61,7 +67,7 @@ class _loan1State extends State<loan1> {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       ClipRRect(
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(15),
                           child: Image.asset(
                             "assets/images/a.png",
                           )
@@ -83,16 +89,20 @@ class _loan1State extends State<loan1> {
             ),
             GridView.builder(
               shrinkWrap: true,
-              padding: const EdgeInsets.fromLTRB(30, 0, 30, 5),
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 5),
               itemCount: 4,
               itemBuilder: (ctx, index) {
                 return Card(
+                  elevation: 5,
                   child: Container(
                     // height: 500,
-                    decoration:
-                        BoxDecoration(borderRadius: BorderRadius.circular(20)),
-                    margin: EdgeInsets.all(5),
-                    padding: EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.grey[50],
+                    ),
+                    // margin: EdgeInsets.all(5),
+                    // padding: EdgeInsets.all(5),
+
                     child: Stack(
                       children: [
                         Column(
@@ -101,22 +111,36 @@ class _loan1State extends State<loan1> {
                             Expanded(
                                 child: Container(
                               child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text(
-                                    "23%", style: TextStyle(fontSize: 20),
-                                    // 'description',
-                                    // fit: BoxFit.fill,
+                                  Container(
+                                    // padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                    child: Text(
+                                      integer[index],
+                                      style: TextStyle(fontSize: 18),
+                                      // 'description',
+                                      // fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ],
                               ),
                             )),
-                            Text(
-                              text[index],
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
+                            Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(10),
+                                      bottomRight: Radius.circular(10)),
+                                  color: Colors.grey[300]),
+                              padding: EdgeInsets.fromLTRB(10, 10, 0, 5),
+                              child: Text(
+                                text[index],
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
+
                             // Row(
                             //   children: [
                             //     Text(
@@ -138,20 +162,26 @@ class _loan1State extends State<loan1> {
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 childAspectRatio: 1.0,
-                crossAxisSpacing: 0.0,
-                mainAxisSpacing: 5,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
                 mainAxisExtent: 150,
               ),
             ),
             SizedBox(
               height: 10,
             ),
+            Container(
+              margin: EdgeInsets.fromLTRB(0, 0, 150, 0),
+              child: Text("Terms and conditions applied."),
+            ),
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
-                  shape: BeveledRectangleBorder(
-                borderRadius: BorderRadius.circular(5),
-              )),
+                  backgroundColor: Colors.black,
+                  foregroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  )),
               child: Text("Apply Now"),
             )
           ],
