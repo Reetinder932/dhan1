@@ -13,6 +13,10 @@
 ![process](https://github.com/Reetinder932/dhan1/assets/113838495/f80449b5-a5ee-4228-b811-fc5c63d28c39)
 
 
+# Tech Stack
+
+
+![Screenshot 2023-08-28 220217](https://github.com/Reetinder932/dhan1/assets/113838495/e0f55c0a-647e-4c45-9388-82f9fbdbd427)
 
 
 
