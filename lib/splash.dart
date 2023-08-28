@@ -1,6 +1,7 @@
 // import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:dhan1/navbar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 // import 'package:flutter_spinkit/flutter_spinkit.dart';
 class loading extends StatefulWidget {
@@ -30,7 +31,7 @@ class _loadingState extends State<loading> {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          color: Color(0xff071938),
+          color: Colors.white,
         ),
         margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
         child: Column(
@@ -54,10 +55,10 @@ class _loadingState extends State<loading> {
             //   stopPauseOnTap: true,
             // ),
             Image.asset('assets/images/abc.png'),
-            // SpinKitCircle(
-            //   color: Colors.blueAccent,
-            //   size: 300,
-            // )
+            SpinKitCircle(
+              color: Colors.black,
+              size: 50,
+            )
           ],
         ),
       ),

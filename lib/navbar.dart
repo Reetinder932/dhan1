@@ -13,7 +13,7 @@ class _navbarState extends State<navbar> {
     return Scaffold(
       extendBody: true,
       bottomNavigationBar: Container(
-        margin: EdgeInsets.symmetric(horizontal: 100, vertical: 5),
+        margin: EdgeInsets.symmetric(horizontal: 60, vertical: 5),
         decoration: BoxDecoration(
           // color: Colors.blue,
           borderRadius: BorderRadius.all(
@@ -56,10 +56,10 @@ class _navbarState extends State<navbar> {
                 icon: Icon(Icons.home),
                 label: 'Home',
               ),
-              // BottomNavigationBarItem(
-              //   icon: Icon(Icons.format_align_center),
-              //   label: 'Forms',
-              // ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.file_copy),
+                label: 'Documents',
+              ),
               BottomNavigationBarItem(
                   icon: Icon(
                     Icons.question_mark_rounded,

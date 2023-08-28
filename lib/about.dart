@@ -95,7 +95,7 @@ class FaqPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           backgroundColor: Colors.white,
-          scrolledUnderElevation: 0.0,
+          // scrolledUnderElevation: 0.0,
           // backgroundColor: Colors.transparent,
           title: Container(
             margin: EdgeInsets.fromLTRB(0, 25, 0, 20),

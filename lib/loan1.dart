@@ -10,19 +10,14 @@ class loan1 extends StatefulWidget {
 }
 
 class _loan1State extends State<loan1> {
-  List<String> text = ["Interest", "Eligibility", "Repayment Time", "Minimum"];
+  List<String> text = ["Interest", "Repayment Time", "Minimum", "Eligibility"];
   List<IconData> symbols = [
     Icons.timeline,
-    Icons.person_search,
+    Icons.access_time_filled,
     Icons.currency_rupee,
-    Icons.access_time_filled
+    Icons.person_search,
   ];
-  List<String> integer = [
-    "10%",
-    "Required\n - Farad \n  ",
-    "3 years",
-    "1 lakh"
-  ];
+  List integer = ["10%", "3 years", "1 lakh", " "];
   @override
   @override
   Widget build(BuildContext context) {
@@ -76,7 +71,7 @@ class _loan1State extends State<loan1> {
                       ClipRRect(
                           borderRadius: BorderRadius.circular(15),
                           child: Image.asset(
-                            "assets/images/irrigation.png",
+                            "assets/images/yojana.jpg",
                           )
 
                           // width: double.infinity,
@@ -107,7 +102,7 @@ class _loan1State extends State<loan1> {
                     // height: 500,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.grey[50],
+                      color: Color.fromARGB(255, 0, 180, 239),
                     ),
                     // margin: EdgeInsets.all(5),
                     // padding: EdgeInsets.all(5),
@@ -125,32 +120,22 @@ class _loan1State extends State<loan1> {
                                   FittedBox(
                                     // padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
                                     fit: BoxFit.scaleDown,
-                                    child: Text(
-                                      integer[index],
-                                      style: TextStyle(fontSize: 24),
-                                      // 'description',
-                                      // fit: BoxFit.fill,
-                                    ),
-                                  ],
-                                ),
-                              )),
-                              Container(
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(
-                                        bottomLeft: Radius.circular(10),
-                                        bottomRight: Radius.circular(10)),
-                                    color: Colors.grey[300]),
-                                padding: EdgeInsets.fromLTRB(10, 10, 0, 5),
-                                child: Text(
-                                  text[index],
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
+                                    child: integer[index] != " "
+                                        ? Text(
+                                            integer[index],
+                                            style: TextStyle(
+                                              fontSize: 24,
+                                              color: Colors.white,
+                                            ),
+                                            // 'description',
+                                            // fit: BoxFit.fill,
+                                          )
+                                        : Icon(
+                                            Icons.verified,
+                                            size: 50,
+                                            color: Colors.white,
+                                          ),
                                   ),
-<<<<<<< HEAD
-                                ),
-                              ),
-=======
                                 ],
                               ),
                             )),
@@ -159,50 +144,52 @@ class _loan1State extends State<loan1> {
                                   borderRadius: BorderRadius.only(
                                       bottomLeft: Radius.circular(10),
                                       bottomRight: Radius.circular(10)),
-                                  color: Colors.grey[300]),
+                                  color: Color.fromARGB(255, 0, 180, 239)),
                               padding: EdgeInsets.fromLTRB(10, 10, 0, 5),
                               child: Row(children: [
-                                Icon(symbols[index]),
+                                Icon(
+                                  symbols[index],
+                                  color: Colors.white,
+                                ),
                                 Text(
                                   text[index],
                                   style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
+                                    color: Colors.white,
                                   ),
                                 )
                               ]),
                             ),
->>>>>>> 879a9abacc65139731f5158d070c4d1641da2961
 
-                              // Row(
-                              //   children: [
-                              //     Text(
-                              //       'Subtitle',
-                              //       style: TextStyle(
-                              //         fontWeight: FontWeight.bold,
-                              //         fontSize: 15,
-                              //       ),
-                              //     ),
-                              //   ],
-                              // )
-                            ],
-                          ),
-                        ],
-                      ),
+                            // Row(
+                            //   children: [
+                            //     Text(
+                            //       'Subtitle',
+                            //       style: TextStyle(
+                            //         fontWeight: FontWeight.bold,
+                            //         fontSize: 15,
+                            //       ),
+                            //     ),
+                            //   ],
+                            // )
+                          ],
+                        ),
+                      ],
                     ),
-                  );
-                },
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  childAspectRatio: 1.0,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                  mainAxisExtent: 150,
-                ),
+                  ),
+                );
+              },
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: 1.0,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+                mainAxisExtent: 150,
               ),
             ),
             SizedBox(
-              height: 40,
+              height: 10,
             ),
             Container(
               margin: EdgeInsets.fromLTRB(0, 0, 150, 0),

@@ -10,19 +10,14 @@ class loan2 extends StatefulWidget {
 }
 
 class _loan2State extends State<loan2> {
-  List<String> text = ["Interest", "Eligibility", "Repayment Time", "Minimum"];
+  List<String> text = ["Interest", "Repayment Time", "Minimum", "Eligibility"];
   List<IconData> symbols = [
     Icons.timeline,
-    Icons.person_search,
+    Icons.access_time_filled,
     Icons.currency_rupee,
-    Icons.access_time_filled
+    Icons.person_search,
   ];
-  List<String> integer = [
-    "8%",
-    "Required\n - Farad \n  ",
-    "2 years",
-    "80 thousand"
-  ];
+  List integer = ["11%", "2 years", "80 thousand", " "];
   @override
   @override
   Widget build(BuildContext context) {
@@ -76,7 +71,7 @@ class _loan2State extends State<loan2> {
                       ClipRRect(
                           borderRadius: BorderRadius.circular(15),
                           child: Image.asset(
-                            "assets/images/kisan.png",
+                            "assets/images/irrigation.png",
                           )
 
                           // width: double.infinity,
@@ -107,7 +102,7 @@ class _loan2State extends State<loan2> {
                     // height: 500,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.grey[50],
+                      color: Color.fromARGB(255, 0, 180, 239),
                     ),
                     // margin: EdgeInsets.all(5),
                     // padding: EdgeInsets.all(5),
@@ -125,12 +120,21 @@ class _loan2State extends State<loan2> {
                                   FittedBox(
                                     // padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
                                     fit: BoxFit.scaleDown,
-                                    child: Text(
-                                      integer[index],
-                                      style: TextStyle(fontSize: 24),
-                                      // 'description',
-                                      // fit: BoxFit.fill,
-                                    ),
+                                    child: integer[index] != " "
+                                        ? Text(
+                                            integer[index],
+                                            style: TextStyle(
+                                              fontSize: 24,
+                                              color: Colors.white,
+                                            ),
+                                            // 'description',
+                                            // fit: BoxFit.fill,
+                                          )
+                                        : Icon(
+                                            Icons.verified,
+                                            size: 50,
+                                            color: Colors.white,
+                                          ),
                                   ),
                                 ],
                               ),
@@ -140,15 +144,19 @@ class _loan2State extends State<loan2> {
                                   borderRadius: BorderRadius.only(
                                       bottomLeft: Radius.circular(10),
                                       bottomRight: Radius.circular(10)),
-                                  color: Colors.grey[300]),
+                                  color: Color.fromARGB(255, 0, 180, 239)),
                               padding: EdgeInsets.fromLTRB(10, 10, 0, 5),
                               child: Row(children: [
-                                Icon(symbols[index]),
+                                Icon(
+                                  symbols[index],
+                                  color: Colors.white,
+                                ),
                                 Text(
                                   text[index],
                                   style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
+                                    color: Colors.white,
                                   ),
                                 )
                               ]),
@@ -179,6 +187,9 @@ class _loan2State extends State<loan2> {
                 mainAxisSpacing: 10,
                 mainAxisExtent: 150,
               ),
+            ),
+            SizedBox(
+              height: 10,
             ),
             Container(
               margin: EdgeInsets.fromLTRB(0, 0, 150, 0),

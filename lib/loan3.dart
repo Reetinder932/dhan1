@@ -10,19 +10,15 @@ class loan3 extends StatefulWidget {
 }
 
 class _loan3State extends State<loan3> {
-  List<String> text = ["Interest", "Eligibility", "Repayment Time", "Minimum"];
+  List<String> text = ["Interest", "Repayment Time", "Minimum", "Eligibility"];
   List<IconData> symbols = [
     Icons.timeline,
-    Icons.person_search,
+    Icons.access_time_filled,
     Icons.currency_rupee,
-    Icons.access_time_filled
+    Icons.person_search,
   ];
-  List<String> integer = [
-    "12%",
-    "Required\n - Farad \n",
-    "Upto 5 years",
-    "12 lpa"
-  ];
+
+  List integer = ["10%", "3 years", "5 lpa", " "];
   @override
   @override
   Widget build(BuildContext context) {
@@ -76,7 +72,7 @@ class _loan3State extends State<loan3> {
                       ClipRRect(
                           borderRadius: BorderRadius.circular(15),
                           child: Image.asset(
-                            "assets/images/yojana.jpg",
+                            "assets/images/kisan.png",
                           )
 
                           // width: double.infinity,
@@ -107,7 +103,7 @@ class _loan3State extends State<loan3> {
                     // height: 500,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.grey[50],
+                      color: Color.fromARGB(255, 0, 180, 239),
                     ),
                     // margin: EdgeInsets.all(5),
                     // padding: EdgeInsets.all(5),
@@ -125,12 +121,21 @@ class _loan3State extends State<loan3> {
                                   FittedBox(
                                     // padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
                                     fit: BoxFit.scaleDown,
-                                    child: Text(
-                                      integer[index],
-                                      style: TextStyle(fontSize: 24),
-                                      // 'description',
-                                      // fit: BoxFit.fill,
-                                    ),
+                                    child: integer[index] != " "
+                                        ? Text(
+                                            integer[index],
+                                            style: TextStyle(
+                                              fontSize: 24,
+                                              color: Colors.white,
+                                            ),
+                                            // 'description',
+                                            // fit: BoxFit.fill,
+                                          )
+                                        : Icon(
+                                            Icons.cancel,
+                                            size: 50,
+                                            color: Colors.white,
+                                          ),
                                   ),
                                 ],
                               ),
@@ -140,15 +145,19 @@ class _loan3State extends State<loan3> {
                                   borderRadius: BorderRadius.only(
                                       bottomLeft: Radius.circular(10),
                                       bottomRight: Radius.circular(10)),
-                                  color: Colors.grey[300]),
+                                  color: Color.fromARGB(255, 0, 180, 239)),
                               padding: EdgeInsets.fromLTRB(10, 10, 0, 5),
                               child: Row(children: [
-                                Icon(symbols[index]),
+                                Icon(
+                                  symbols[index],
+                                  color: Colors.white,
+                                ),
                                 Text(
                                   text[index],
                                   style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
+                                    color: Colors.white,
                                   ),
                                 )
                               ]),
@@ -180,15 +189,15 @@ class _loan3State extends State<loan3> {
                 mainAxisExtent: 150,
               ),
             ),
+            SizedBox(
+              height: 10,
+            ),
             Container(
               margin: EdgeInsets.fromLTRB(0, 0, 150, 0),
               child: Text("Terms and conditions applied."),
             ),
             ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => MyApp()));
-              },
+              onPressed: () {},
               style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
                   foregroundColor: Colors.white,

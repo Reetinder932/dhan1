@@ -13,15 +13,16 @@ class home extends StatefulWidget {
 
 class _homeState extends State<home> {
   List<String> images = [
+    "assets/images/yojana.jpg",
     "assets/images/irrigation.png",
     "assets/images/kisan.png",
-    "assets/images/yojana.jpg",
   ];
   List<String> labels = [
     "Composite Minor Irrigation",
     "Kisan Credit Card Scheme",
     "Kisan Tractor Scheme",
   ];
+  List icons = [Icons.verified, Icons.verified, Icons.cancel];
   List page = [loan1(), loan2(), loan3()];
 
   @override
@@ -128,9 +129,11 @@ class _homeState extends State<home> {
                                         //       child: Text("Apply Now")),
                                         // ),
                                         Icon(
-                                          Icons.verified,
+                                          icons[index],
                                           size: 35,
-                                          color: Colors.blue,
+                                          color: icons[index] == Icons.cancel
+                                              ? Colors.red
+                                              : Colors.blue,
                                         ),
                                       ],
                                     ),
