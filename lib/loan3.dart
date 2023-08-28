@@ -1,6 +1,7 @@
 import 'package:dhan1/form.dart';
 import 'package:flutter/material.dart';
 import 'navbar.dart';
+import 'package:get/get.dart';
 
 class loan3 extends StatefulWidget {
   const loan3({super.key});
@@ -197,7 +198,9 @@ class _loan3State extends State<loan3> {
               child: Text("Terms and conditions applied."),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get!.snackbar("Not Accessible", "Fufill Eligibilty Criteria");
+              },
               style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
                   foregroundColor: Colors.white,

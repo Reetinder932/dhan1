@@ -1,4 +1,7 @@
+import 'package:dhan1/home.dart';
+import 'package:dhan1/navbar.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(MyApp());
@@ -126,6 +129,9 @@ class _LoanApplicationFormState extends State<LoanApplicationForm> {
                       print('Email: ${_emailController.text}');
                       print('Loan Amount: ${_amountController.text}');
                       print('Loan Purpose: ${_purposeController.text}');
+                      Get.snackbar("Form Submitted Successfully ", "");
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (context) => navbar()));
                     }
                   },
                   child: Text('Submit'),

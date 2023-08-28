@@ -28,11 +28,11 @@ class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Colors.white,
       extendBody: true,
       appBar: AppBar(
           scrolledUnderElevation: 0.0,
-          // backgroundColor: Colors.transparent,
+          backgroundColor: Colors.white,
           title: Container(
             margin: EdgeInsets.fromLTRB(0, 25, 0, 20),
             // mainAxisAlignment: MainAxisAlignment.center,
@@ -41,6 +41,7 @@ class _homeState extends State<home> {
                 Icon(
                   Icons.list,
                   size: 50,
+                  color: Colors.black,
                 ),
                 Container(
                   margin: EdgeInsets.fromLTRB(47, 5, 0, 0),
