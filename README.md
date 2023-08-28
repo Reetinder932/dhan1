@@ -1,16 +1,19 @@
-# dhan1
+# Dhan.io
+![Screenshot 2023-08-28 215915](https://github.com/Reetinder932/dhan1/assets/113838495/799d3f7c-bb32-474d-a7b7-fb0f8daab0ac)
 
-A new Flutter project.
+##  Application developed : To provide STP digital journey for customers to avail of Agri loans.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+# Network Architecture :
 
-A few resources to get you started if this is your first Flutter project:
+![arch](https://github.com/Reetinder932/dhan1/assets/113838495/5a02601c-3f7e-4d25-9860-fef18eff87d3)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Process Flow :
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![process](https://github.com/Reetinder932/dhan1/assets/113838495/f80449b5-a5ee-4228-b811-fc5c63d28c39)
+
+
+
+
+
+
