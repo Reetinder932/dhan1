@@ -2,14 +2,14 @@ import 'package:dhan1/form.dart';
 import 'package:flutter/material.dart';
 import 'navbar.dart';
 
-class loan1 extends StatefulWidget {
-  const loan1({super.key});
+class loan3 extends StatefulWidget {
+  const loan3({super.key});
 
   @override
-  State<loan1> createState() => _loan1State();
+  State<loan3> createState() => _loan3State();
 }
 
-class _loan1State extends State<loan1> {
+class _loan3State extends State<loan3> {
   List<String> text = ["Interest", "Eligibility", "Repayment Time", "Minimum"];
   List<IconData> symbols = [
     Icons.timeline,
@@ -18,10 +18,10 @@ class _loan1State extends State<loan1> {
     Icons.access_time_filled
   ];
   List<String> integer = [
-    "10%",
-    "Required\n - Farad \n  ",
-    "3 years",
-    "1 lakh"
+    "12%",
+    "Required\n - Farad \n",
+    "Upto 5 years",
+    "12 lpa"
   ];
   @override
   @override
@@ -76,7 +76,7 @@ class _loan1State extends State<loan1> {
                       ClipRRect(
                           borderRadius: BorderRadius.circular(15),
                           child: Image.asset(
-                            "assets/images/irrigation.png",
+                            "assets/images/yojana.jpg",
                           )
 
                           // width: double.infinity,
@@ -131,26 +131,7 @@ class _loan1State extends State<loan1> {
                                       // 'description',
                                       // fit: BoxFit.fill,
                                     ),
-                                  ],
-                                ),
-                              )),
-                              Container(
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(
-                                        bottomLeft: Radius.circular(10),
-                                        bottomRight: Radius.circular(10)),
-                                    color: Colors.grey[300]),
-                                padding: EdgeInsets.fromLTRB(10, 10, 0, 5),
-                                child: Text(
-                                  text[index],
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
                                   ),
-<<<<<<< HEAD
-                                ),
-                              ),
-=======
                                 ],
                               ),
                             )),
@@ -172,37 +153,32 @@ class _loan1State extends State<loan1> {
                                 )
                               ]),
                             ),
->>>>>>> 879a9abacc65139731f5158d070c4d1641da2961
 
-                              // Row(
-                              //   children: [
-                              //     Text(
-                              //       'Subtitle',
-                              //       style: TextStyle(
-                              //         fontWeight: FontWeight.bold,
-                              //         fontSize: 15,
-                              //       ),
-                              //     ),
-                              //   ],
-                              // )
-                            ],
-                          ),
-                        ],
-                      ),
+                            // Row(
+                            //   children: [
+                            //     Text(
+                            //       'Subtitle',
+                            //       style: TextStyle(
+                            //         fontWeight: FontWeight.bold,
+                            //         fontSize: 15,
+                            //       ),
+                            //     ),
+                            //   ],
+                            // )
+                          ],
+                        ),
+                      ],
                     ),
-                  );
-                },
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  childAspectRatio: 1.0,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                  mainAxisExtent: 150,
-                ),
+                  ),
+                );
+              },
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: 1.0,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+                mainAxisExtent: 150,
               ),
-            ),
-            SizedBox(
-              height: 40,
             ),
             Container(
               margin: EdgeInsets.fromLTRB(0, 0, 150, 0),

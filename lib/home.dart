@@ -1,5 +1,6 @@
 import 'package:dhan1/loan1.dart';
 import 'package:dhan1/loan2.dart';
+import 'package:dhan1/loan3.dart';
 import 'package:dhan1/navbar.dart';
 import 'package:flutter/material.dart';
 
@@ -10,20 +11,18 @@ class home extends StatefulWidget {
   State<home> createState() => _homeState();
 }
 
-
 class _homeState extends State<home> {
   List<String> images = [
-    "assets/images/a.png",
+    "assets/images/irrigation.png",
     "assets/images/kisan.png",
     "assets/images/yojana.jpg",
-    "assets/images/a.png",
   ];
-  List page = [
-    loan1(),
-    loan2(),
-    loan1(),
-    loan1(),
+  List<String> labels = [
+    "Composite Minor Irrigation",
+    "Kisan Credit Card Scheme",
+    "Kisan Tractor Scheme",
   ];
+  List page = [loan1(), loan2(), loan3()];
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +68,7 @@ class _homeState extends State<home> {
                   child: ListView.builder(
                       physics: NeverScrollableScrollPhysics(),
                       shrinkWrap: true,
-                      itemCount: 4,
+                      itemCount: 3,
                       itemBuilder: (context, index) {
                         return GestureDetector(
                           onTap: () {
@@ -103,8 +102,14 @@ class _homeState extends State<home> {
                                   Container(
                                     padding: EdgeInsets.all(7),
                                     child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
                                       children: [
+                                        Text(
+                                          labels[index],
+                                          style: const TextStyle(fontSize: 16),
+                                        ),
+                                        Spacer(),
                                         // Container(
                                         //   margin:
                                         //       EdgeInsets.fromLTRB(0, 0, 140, 0),
