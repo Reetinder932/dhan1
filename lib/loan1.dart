@@ -88,84 +88,86 @@ class _loan1State extends State<loan1> {
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               ),
             ),
-            GridView.builder(
-              shrinkWrap: true,
-              padding: const EdgeInsets.fromLTRB(20, 0, 20, 5),
-              itemCount: 4,
-              itemBuilder: (ctx, index) {
-                return Card(
-                  elevation: 5,
-                  child: Container(
-                    // height: 500,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.grey[50],
-                    ),
-                    // margin: EdgeInsets.all(5),
-                    // padding: EdgeInsets.all(5),
+            SingleChildScrollView(
+              child: GridView.builder(
+                shrinkWrap: true,
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 5),
+                itemCount: 4,
+                itemBuilder: (ctx, index) {
+                  return Card(
+                    elevation: 5,
+                    child: Container(
+                      // height: 500,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.grey[50],
+                      ),
+                      // margin: EdgeInsets.all(5),
+                      // padding: EdgeInsets.all(5),
 
-                    child: Stack(
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            Expanded(
-                                child: Container(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Container(
-                                    // padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
-                                    child: Text(
-                                      integer[index],
-                                      style: TextStyle(fontSize: 18),
-                                      // 'description',
-                                      // fit: BoxFit.fill,
+                      child: Stack(
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Expanded(
+                                  child: Container(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      // padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                      child: Text(
+                                        integer[index],
+                                        style: TextStyle(fontSize: 18),
+                                        // 'description',
+                                        // fit: BoxFit.fill,
+                                      ),
                                     ),
+                                  ],
+                                ),
+                              )),
+                              Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.only(
+                                        bottomLeft: Radius.circular(10),
+                                        bottomRight: Radius.circular(10)),
+                                    color: Colors.grey[300]),
+                                padding: EdgeInsets.fromLTRB(10, 10, 0, 5),
+                                child: Text(
+                                  text[index],
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
                                   ),
-                                ],
-                              ),
-                            )),
-                            Container(
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      bottomLeft: Radius.circular(10),
-                                      bottomRight: Radius.circular(10)),
-                                  color: Colors.grey[300]),
-                              padding: EdgeInsets.fromLTRB(10, 10, 0, 5),
-                              child: Text(
-                                text[index],
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
-                            ),
 
-                            // Row(
-                            //   children: [
-                            //     Text(
-                            //       'Subtitle',
-                            //       style: TextStyle(
-                            //         fontWeight: FontWeight.bold,
-                            //         fontSize: 15,
-                            //       ),
-                            //     ),
-                            //   ],
-                            // )
-                          ],
-                        ),
-                      ],
+                              // Row(
+                              //   children: [
+                              //     Text(
+                              //       'Subtitle',
+                              //       style: TextStyle(
+                              //         fontWeight: FontWeight.bold,
+                              //         fontSize: 15,
+                              //       ),
+                              //     ),
+                              //   ],
+                              // )
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                );
-              },
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: 1.0,
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10,
-                mainAxisExtent: 150,
+                  );
+                },
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  childAspectRatio: 1.0,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  mainAxisExtent: 150,
+                ),
               ),
             ),
             SizedBox(
