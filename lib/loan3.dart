@@ -2,14 +2,14 @@ import 'package:dhan1/form.dart';
 import 'package:flutter/material.dart';
 import 'navbar.dart';
 
-class loan1 extends StatefulWidget {
-  const loan1({super.key});
+class loan3 extends StatefulWidget {
+  const loan3({super.key});
 
   @override
-  State<loan1> createState() => _loan1State();
+  State<loan3> createState() => _loan3State();
 }
 
-class _loan1State extends State<loan1> {
+class _loan3State extends State<loan3> {
   List<String> text = ["Interest", "Eligibility", "Repayment Time", "Minimum"];
   List<IconData> symbols = [
     Icons.timeline,
@@ -18,10 +18,10 @@ class _loan1State extends State<loan1> {
     Icons.access_time_filled
   ];
   List<String> integer = [
-    "10%",
-    "Required\n - Farad \n  ",
-    "3 years",
-    "1 lakh"
+    "12%",
+    "Required\n - Farad \n",
+    "Upto 5 years",
+    "12 lpa"
   ];
   @override
   @override
@@ -76,7 +76,7 @@ class _loan1State extends State<loan1> {
                       ClipRRect(
                           borderRadius: BorderRadius.circular(15),
                           child: Image.asset(
-                            "assets/images/irrigation.png",
+                            "assets/images/yojana.jpg",
                           )
 
                           // width: double.infinity,
@@ -179,9 +179,6 @@ class _loan1State extends State<loan1> {
                 mainAxisSpacing: 10,
                 mainAxisExtent: 150,
               ),
-            ),
-            SizedBox(
-              height: 40,
             ),
             Container(
               margin: EdgeInsets.fromLTRB(0, 0, 150, 0),

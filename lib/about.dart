@@ -73,19 +73,19 @@ class FaqApp extends StatelessWidget {
 class FaqPage extends StatelessWidget {
   final List<Map<String, String>> faqData = [
     {
-      'question': 'What is Flutter?',
+      'question': 'What can I use a personal loan for?',
       'answer':
-          'Flutter is an open-source UI software development toolkit created by Google.',
+          'A personal loan can be used for almost any type of expense ranging from big ticket appliance purchases and home renovations to luxury vacations and debt consolidation. Some other cases where personal loans may be useful include payment to unexpected medical bills, investment in business, fixing your car, down payment of new house and much more.',
     },
     {
-      'question': 'How does Flutter work?',
+      'question': 'What is eligibility for Kisan Credit Card Scheme?',
       'answer':
-          'Flutter uses a single codebase to create native-looking apps for multiple platforms.',
+          'In order to be eligible for KCC, you should be either: \n\n - All farmers-individuals/Joint borrowers who are owner cultivators. \n - Tenant farmers, Oral lessees and Share croppers, etc,. \n - SHGs or Joint Liability Groups of farmers including tenant farmers, share croppers, etc,.',
     },
     {
-      'question': 'Is Flutter easy to learn?',
+      'question': 'Who are eligible for Kisan Samriddhi Rin?',
       'answer':
-          'Yes, Flutter has a simple and intuitive syntax, making it easy for developers to learn.',
+          '- Farmers engaged in progressive or Scientific farming.\n- Minimum land holding: At least having 4 acres of land holding Or farmer is engaged in scientific methods of farming. ',
     },
     // Add more FAQ entries as needed
   ];

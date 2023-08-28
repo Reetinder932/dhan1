@@ -11,6 +11,12 @@ class loan2 extends StatefulWidget {
 
 class _loan2State extends State<loan2> {
   List<String> text = ["Interest", "Eligibility", "Repayment Time", "Minimum"];
+  List<IconData> symbols = [
+    Icons.timeline,
+    Icons.person_search,
+    Icons.currency_rupee,
+    Icons.access_time_filled
+  ];
   List<String> integer = [
     "8%",
     "Required\n - Farad \n  ",
@@ -82,12 +88,14 @@ class _loan2State extends State<loan2> {
               ),
             ),
             Container(
-              margin: EdgeInsets.fromLTRB(0, 0, 200, 0),
-              child: Text(
-                "Features",
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-              ),
-            ),
+                margin: EdgeInsets.fromLTRB(0, 0, 200, 0),
+                child: Text(
+                  "Features",
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
+                )),
             GridView.builder(
               shrinkWrap: true,
               padding: const EdgeInsets.fromLTRB(20, 0, 20, 5),
@@ -114,11 +122,12 @@ class _loan2State extends State<loan2> {
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Container(
+                                  FittedBox(
                                     // padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                    fit: BoxFit.scaleDown,
                                     child: Text(
                                       integer[index],
-                                      style: TextStyle(fontSize: 18),
+                                      style: TextStyle(fontSize: 24),
                                       // 'description',
                                       // fit: BoxFit.fill,
                                     ),
@@ -133,13 +142,16 @@ class _loan2State extends State<loan2> {
                                       bottomRight: Radius.circular(10)),
                                   color: Colors.grey[300]),
                               padding: EdgeInsets.fromLTRB(10, 10, 0, 5),
-                              child: Text(
-                                text[index],
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                              child: Row(children: [
+                                Icon(symbols[index]),
+                                Text(
+                                  text[index],
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                )
+                              ]),
                             ),
 
                             // Row(
@@ -168,9 +180,6 @@ class _loan2State extends State<loan2> {
                 mainAxisExtent: 150,
               ),
             ),
-            SizedBox(
-              height: 10,
-            ),
             Container(
               margin: EdgeInsets.fromLTRB(0, 0, 150, 0),
               child: Text("Terms and conditions applied."),
@@ -184,7 +193,7 @@ class _loan2State extends State<loan2> {
                   backgroundColor: Colors.black,
                   foregroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(30),
                   )),
               child: Text("Apply Now"),
             )
