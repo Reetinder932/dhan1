@@ -1,3 +1,4 @@
+import 'package:dhan1/form.dart';
 import 'package:flutter/material.dart';
 import 'navbar.dart';
 
@@ -175,7 +176,10 @@ class _loan1State extends State<loan1> {
               child: Text("Terms and conditions applied."),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => MyApp()));
+              },
               style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
                   foregroundColor: Colors.white,

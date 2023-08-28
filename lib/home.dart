@@ -10,11 +10,12 @@ class home extends StatefulWidget {
   State<home> createState() => _homeState();
 }
 
+
 class _homeState extends State<home> {
   List<String> images = [
     "assets/images/a.png",
-    "assets/images/a.png",
-    "assets/images/a.png",
+    "assets/images/kisan.png",
+    "assets/images/yojana.jpg",
     "assets/images/a.png",
   ];
   List page = [
